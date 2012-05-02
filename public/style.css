@@ -1,0 +1,760 @@
+/*
+Designed by Bill Kenney at Focus Lab, LLC
+Front End Development by Kevin Lawver & Steven Scarborough
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	font: 15px/22px helvetica, arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+blockquote {
+	font-size: 21px;
+	font-style: italic;
+	margin: 0;
+	padding: 26px 0;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	line-height: 31px;
+}
+
+
+@font-face {
+	font-family: 'Museo700';
+	src: url('fonts/Museo700-Regular-webfont.eot');
+	src: url('fonts/Museo700-Regular-webfont.eot?#iefix') format('eot'),
+		     url('fonts/Museo700-Regular-webfont.woff') format('woff'),
+		     url('fonts/Museo700-Regular-webfont.ttf') format('truetype'),
+		     url('fonts/Museo700-Regular-webfont.svg#Museo700') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Museo500';
+	src: url('fonts/Museo500-Regular-webfont.eot');
+	src: url('fonts/Museo500-Regular-webfont.eot?#iefix') format('eot'),
+		     url('fonts/Museo500-Regular-webfont.woff') format('woff'),
+		     url('fonts/Museo500-Regular-webfont.ttf') format('truetype'),
+		     url('fonts/Museo500-Regular-webfont.svg#Museo500') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+header#main-header {
+	height: 763px;
+	background: #0c0b09 url('images/header-img.png') fixed no-repeat -20px 67px;
+	color: white;
+}
+
+body.eight-bit header#main-header {
+  background-image:url("/images/header_back_8.png");
+}
+
+.header-top {
+	height: 100px;
+	border-bottom: 1px solid #8f2114;
+}
+
+.tedxcc-logo {
+	width: 268px;
+	margin-top: 23px;
+	float: left;
+}
+
+#social {
+	width: 100px;
+	float: right;
+	margin-top: 39px;
+}
+
+#social li {
+	display: inline-block;
+}
+
+#social a {
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	display: block;
+	text-indent: -99999px;
+	overflow:hidden;
+	-webkit-transition: background 0.5s linear;
+	-moz-transition: background 0.5s linear;
+	-o-transition: background 0.5s linear;
+	-ms-transition: background 0.5s linear;
+	transition: background 0.5s linear;
+}
+
+.facebook a {
+	background: url('images/social/facebook.png') no-repeat;
+}
+
+.facebook a:hover {
+	background: url('images/social/facebook_hover.png') no-repeat;
+}
+
+.twitter a {
+	background: url('images/social/twitter.png') no-repeat;
+}
+
+.twitter a:hover {
+	background: url('images/social/twitter_hover.png') no-repeat;
+}
+
+.flickr a {
+	background: url('images/social/flickr.png') no-repeat;
+}
+
+.flickr a:hover {
+	background: url('images/social/flickr_hover.png') no-repeat;
+}
+
+#headline {
+	width: 333px;
+	margin: 70px 0 0 609px;
+}
+
+h2 {
+	font: bolder 52px/52px "Helvetica Neue", helvetica, arial, sans-serif;
+	margin-bottom: 0;
+}
+
+#headline li {
+	list-style-type: none;
+	font: bolder 21px/24px "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+.learn-more {
+	font: 16px/24px Museo700, arial, sans-serif;
+	color: #f78171;
+	text-decoration: none;
+}
+
+a.learn-more:hover {
+	border-bottom: 1px solid #f78171;
+}
+
+#register {
+	width: 340px;
+	height: 95px;
+	margin: 65px 0 0 0;
+	padding-top: 3px;
+	text-transform: uppercase;
+}
+
+.remaining-days {
+	position: relative;
+	top: 52px;
+	font: bolder 12px/12px "Helvetica Neue", helvetica, arial, sans-serif;
+	text-shadow: .03em .01em #fe8272;
+	color: #8f2114;
+	margin-left: 20px;
+}
+
+.remaining-days span {
+	position: absolute;
+	top: -51px;
+	font: bolder 50px/45px "Helvetica Neue", helvetica, arial, sans-serif;
+	text-shadow: .03em .01em #fe8272;
+}
+
+.register {
+	position: relative;
+	left: 134px;
+	top: 17px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	text-shadow: 1px 1px #b82c1b;
+	font-size: 12px;
+}
+
+.register span {
+	position: absolute;
+	top: -33px;
+	font: normal 35px/35px Museo700, arial, sans-serif;
+	text-shadow: 1px 1px #b82c1b;
+	letter-spacing: 0px;
+}
+
+a.register-button {
+	display: block;
+	background: url('images/register.png') no-repeat left;
+	color: white;
+	text-decoration: none;
+	-webkit-transition: background 0.5s linear;
+	-moz-transition: background 0.5s linear;
+	-o-transition: background 0.5s linear;
+	-ms-transition: background 0.5s linear;
+	transition: background 0.5s linear;
+}
+
+a.register-button:hover {
+	background: url('images/register_hover.png') no-repeat left;
+}
+
+
+nav#main-navigation {
+	background: rgba(00,00,00,0.8);
+	height: 80px;
+	position: relative;
+	top: 70px;
+}
+
+
+nav#main-navigation.fixed {
+  z-index:5000;
+  position:fixed;
+  width:100%;
+  top:0;
+}
+
+
+nav#main-navigation div.content {
+  margin:0 auto;
+  padding:0;
+}
+
+
+nav#main-navigation ul {
+  margin:0 0 0 -5px;
+}
+
+nav#main-navigation li {
+	display: inline-block;
+  padding:0;
+	margin:0;
+}
+
+
+nav#main-navigation.fixed li {
+  padding:0;
+}
+
+
+nav#main-navigation a {
+  display:block;
+	text-decoration: none;
+	padding: 28px 25px 29px 25px;
+	color: white;
+	font: 18px/22px "helvetica neue", helvetica, arial, sans-serif;
+	text-transform: capitalize;
+	letter-spacing: .07em;
+	-webkit-transition: background 1s ease;
+	-moz-transition: background 1s ease;
+	-o-transition: background 1s linear;
+	-ms-transition: background 1s linear;
+	transition: background-color 0.5s ease;
+}
+
+nav#main-navigation a:hover {
+	background-color: rgba(100,100,100,0.5);
+}
+
+article {
+	padding: 1px 0 60px 0;
+}
+
+#speakers, #program, #thankyou {
+	background: #f9f9f9 url('images/speakers-bkgd.jpg');
+}
+
+#speakers h3 {
+	border-bottom: 1px solid #f45743;
+	padding-bottom: 30px;
+}
+
+#speakers h3, #program h3 {
+	color: #f45743;
+}
+
+#speakers ul {
+	margin: 30px 0 60px 0;
+}
+
+#speakers section {
+	background: url('images/sprite.png') -2px -89px;
+	height: 68px;
+	font: bold 25px/25px helvetica, arial, sans-serif;
+	color: white;
+}
+
+#speakers #speaker-headshot li {
+  position:relative;
+}
+
+#speakers #speaker-headshot li span {
+  display:block;
+  position:absolute;
+  top:7px;
+  left:7px;
+  width:218px;
+  height:210px;
+  -webkit-transition: background 0.5s linear;
+	-moz-transition: background 0.5s linear;
+	-o-transition: background 0.5s linear;
+	-ms-transition: background 0.5s linear;
+	transition: background 0.5s linear;
+}
+
+#speakers #speaker-headshot li span:hover {
+  display:block;
+  background:rgba(233,65,46,0.3); 
+}
+
+#speakers #speaker-headshot li a:hover {
+
+}
+
+#speakers #speaker-headshot li img {
+	display:block;
+/*  width:170px;
+  height:163px;
+*/
+  width:218px;
+}
+
+#speakers img {
+	padding: 7px;
+}
+
+.call-for-speakers {
+	position: relative;
+	top: 22px;
+	left: 50px;
+}
+
+.apply-link {
+	width: 240px;
+	height: 77px;
+	background: url('images/sprite.png') -208px -165px;
+	position: relative;
+	top: -50px;
+	left: 700px;
+}
+
+.apply-link a {
+	color: white;
+	text-decoration: none;
+	padding: 20px;
+	position: relative;
+	top: 20px;
+	left: 20px;
+}
+
+.speaker-bios {
+	color: #41403e;
+	background: white;
+	padding: 60px;
+	width: 820px;
+	min-height:250px;
+	box-shadow: 0px 0px 5px #e7e7e7;
+}
+
+.speaker-bios a.modal-close {
+	float:right;
+	position:relative;
+	top:-60px;
+	left:55px;
+	color:#f45743;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.bio {
+  float:left;
+	width: 440px;
+	background: url('images/bio-border.png')repeat-y 493px 0;
+	padding-right: 60px;
+}
+
+#speakers .bio li {
+	display: block;
+}
+
+#speakers ul.speaker-name-sub {
+	margin-bottom: 20px;
+}
+
+.speaker-name {
+	display: block;
+	font: 35px/35px Museo700, arial, sans-serif;
+	color: #E9412E;
+}
+
+.speaker-sub {
+	font-size: 18px;
+	color: #e9412e;
+	font-family: "helvetica neue", helvetica, arial, sans-serif;
+}
+
+.speaking-on {
+/*  position: relative;
+  top: -259px;
+  right: 0;*/
+	float: right;
+	width: 260px;
+}
+
+.speaking-on-title {
+	font: 18px/18px 'Museo500', arial, sans-serif;
+	color: #e9412e;
+}
+
+.speaking-on-excerpt {
+	margin-top: 41px;
+}
+
+.readmore {
+	color: #e9412e;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#about, #venue {
+	background: #e9412e;
+	color: white;
+}
+
+body.8bit #about-header {
+  background-image: url("image/about_back_8.png");
+}
+
+#about-header {
+	background: #000 url("images/about_back.png") fixed no-repeat;
+	
+	height: 443px;
+}
+
+#about section, #venue section {
+	float: left;
+	width: 275px;
+	height: 425px;
+	margin-right: 58px;
+}
+
+#venue section {
+	float: none;
+	height: 325px;
+}
+
+#about section span {
+	font-weight: bolder;
+	font-size: 16px;
+}
+
+p.questions {
+	margin-bottom: -13px;
+}
+
+#about section.last {
+	margin-right: 0;
+}
+
+#about #news a {
+  color:#70170d;
+  font-weight:bold;
+}
+
+body.8bit #program-header {
+  background-image: url("image/program_back_8.png");
+}
+
+#program-header {
+  margin:0;
+  padding:0;
+  height:474px;
+	background: #000 url('images/program_back.png') fixed no-repeat 50% 0;
+}
+
+#program img {
+	float: left;
+	margin: 0 30px 30px 44px;
+}
+
+.talk-info {
+	height: 170px;
+}
+
+h3 {
+	font-size: 35px;
+	font-family: Museo700, arial, sans-serif;
+}
+
+h4 {
+	font: normal 24px/25px Museo500, arial, sans-serif;
+}
+
+h5 {
+	font-weight: bolder;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+.content {
+	width: 942px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.ribbon {
+	margin: 0 auto;
+	width: 940px;
+	height: 77px;
+	background: url('images/sprite.png') -2px 0;
+}
+
+#speakers li {
+	display: inline-block;
+}
+
+.session-one-times {
+	background: url('images/sprite.png') 0 -376px;
+	margin-bottom: 30px;
+	height: 106px;
+}
+
+.session-two-times {
+	background: url('images/sprite.png') 0 -258px;
+	margin-bottom: 30px;
+	margin-top: 50px;
+	height: 106px;
+}
+
+.session-three-times {
+	background: url('images/sprite.png') 0 -258px;
+	margin-bottom: 30px;
+	margin-top: 50px;
+	height: 106px;
+}
+
+.session-four-times {
+	border-top: 1px solid #F4523E;
+	margin-bottom: 30px;
+	margin-top: 50px;
+	height: 106px;
+}
+
+.session-five-times {
+	background: url('images/sprite.png') 0 -258px;
+	margin-bottom: 30px;
+	margin-top: 50px;
+	height: 106px;
+}
+
+#program ul {
+	width: 216px;
+	padding-top: 17px;
+	margin-right: 116px;
+	margin-left: 15px;
+	float: left;
+}
+
+#program ul.first {
+	margin-right: 130px;
+}
+
+#program ul.last {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+#program .session-two-times ul.last, #program .session-three-times ul.last, #program .session-five-times ul.last {
+	width: 580px;
+}
+
+#program p.session-time, #program p.session-time span {
+	color: #f7f7f7;
+}
+
+#program p.session-time span {
+	font-weight: normal;
+	font-family: Museo500, arial, sans-serif;
+	font-size: 24px;
+	margin: 0 50px;
+}
+
+#program p.session-time {
+	font-weight: bolder;
+	font-size: 30px;
+	height: 20px;
+	padding: 28px 0 40px 0;
+}
+
+#program h4 {
+	color: #e9412e;
+	font-weight: normal;
+	margin-bottom: -13px;
+}
+
+#program p span {
+	color: #e9412e;
+}
+
+#program p {
+	color: #41403e;
+}
+
+.session-times {
+	font-size: 30px;
+	color: #f4523e;
+	font-weight: bolder;
+	margin-bottom: 11px;
+}
+
+.session-times-description {
+	font-family: Museo500, arial, sans-serif;
+	color: #e9412e;
+	font-size: 24px;
+}
+
+#venue #venue-map {
+	float:right;
+	padding-top:33px;
+}
+
+#venue h4 {
+	margin-bottom: 0;
+}
+
+/*.directions-pin {
+  background: url('images/sprite.png') -58px 836px;
+  display: block;
+  text-indent: -99999px;
+  overflow:hidden;
+  padding: 5px 0 5px 25px;
+  width: 105px;
+  -webkit-transition: background 0.5s linear;
+}
+
+.directions-pin:hover {
+  background: url('images/sprite.png') -58px 799px;
+}*/
+
+.directions-pin {
+  background: url('images/directions.png') no-repeat left;
+  display:block;
+  padding: 5px 0 5px 25px;
+  font-weight:bold;
+  color:#70170d;
+  text-decoration:none;
+  -webkit-transition: color 0.5s linear;
+  -moz-transition: color 0.5s linear;
+  -o-transition: color 0.5s linear;
+  -ms-transition: color 0.5s linear;
+  transition: color 0.5s linear;
+}
+
+.directions-pin:hover {
+  background: url('images/directions_hover.png') no-repeat left;
+  color:#08070e;
+}
+
+body.8bit #thankyou-header {
+  background-image: url("image/venue_back_8.png");
+}
+
+#thankyou-header {
+	background: url('images/venue_back.png') fixed no-repeat;
+	height: 593px;
+}
+
+.thankyousponsors {
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	position: relative;
+	top: -44px;
+	padding-top: 29px;
+	height: 50px;
+}
+
+#thankyou .level-one {
+	border-bottom: 1px solid #F4523E;
+}
+
+#thankyou li {
+	display: inline-block;
+	padding: 20px 38px;
+}
+
+footer#main-footer {
+	height: 700px;
+	background: #0c0b09 url('images/footer-img.png') fixed no-repeat 92% 100%;
+	color: white;
+}
+
+body.eight-bit footer#main-footer {
+  background-image: url("images/footer_back_8.png");
+}
+
+footer .content {
+	padding-top: 200px;
+	text-align: center;
+}
+
+p.license {
+	font-size: 12px;
+}
+
+p.license a {
+	color: white;
+	text-decoration: none;
+}
+
+.license a:hover {
+	border-bottom: 1px solid white;
+}
+
+p.copyright {
+	padding-bottom: 40px;
+}
+
+p.credits {
+	background: url('images/sprite.png') -2px 390px;
+	height: 53px;
+	font-family: Museo500, arial, sans-serif;
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 17px;
+}
+
+.credits a {
+	color: white;
+	text-decoration: none;
+}
+
+.credits a:hover {
+	border-bottom: 1px solid white;
+}
+
+#countdown {
+  display:none;
+}
+
+#simplemodal-overlay {
+	display:none;
+	background:#000;
+}
+
+div.clear {
+  clear:both;
+}
