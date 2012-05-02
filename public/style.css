@@ -431,9 +431,9 @@ article {
 	color: white;
 }
 
-body.8bit #about-header {
+/*body.8bit #about-header {
   background-image: url("image/about_back_8.png");
-}
+}*/
 
 #about-header {
 	background: #000 url("images/about_back.png") fixed no-repeat;
@@ -665,13 +665,13 @@ h5 {
   background: url('images/directions_hover.png') no-repeat left;
   color:#08070e;
 }
-
+/*
 body.8bit #thankyou-header {
   background-image: url("image/venue_back_8.png");
-}
+}*/
 
 #thankyou-header {
-	background: url('images/venue_back.png') fixed no-repeat;
+	background: #000 url('images/jepson.jpg') fixed no-repeat;
 	height: 593px;
 }
 
