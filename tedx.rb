@@ -5,7 +5,7 @@ class TedX < Sinatra::Base
   @@index_content = f.read
   f.close
 
-  set :static_cache_control, [:public, :max_age => 2592000]
+  set :static_cache_control, [:public, {:max_age => 2592000}]
   
   get '/' do
     cache_control :public, :max_age => 24000
