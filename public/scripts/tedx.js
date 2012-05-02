@@ -57,7 +57,7 @@ tedx.parallax={
 }
 
 tedx.news={
-  url: "http://tedxcreativecoast.com/api/read/json?num=10&callback=tedx.news.cb",
+  url: "http://blog.tedxcreativecoast.com/api/read/json?num=10&callback=tedx.news.cb",
   init:function() {
     tedx.addScript(tedx.news.url);
   },
