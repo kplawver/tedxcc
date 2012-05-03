@@ -20,18 +20,27 @@ tedx.toolBar={
     tedx.toolBar.headerNode = $("#main-header");
     tedx.toolBar.headerHeight = tedx.toolBar.headerNode.height();
     setTimeout("tedx.toolBar.check()",250);
+    tedx.toolBar.node.find('a').bind('click', function(e) {
+      e.preventDefault();
+      // destination = ($(this).attr('href') == '#speakers') ? 682 : $(this).attr('href') ;
+      $.scrollTo($(this).attr('href'), 500);
+    });
   },
   check:function() {
     if (tedx.window.scrollTop() > tedx.toolBar.headerHeight) {
       if (!tedx.toolBar.node.hasClass("fixed")) {
         tedx.toolBar.node.fadeOut("fast",function() {
           tedx.toolBar.node.addClass("fixed").fadeIn("fast");
+          tedx.toolBar.node.find('.content').append('<a id="small_register" href="http://tedx2012.eventbrite.com/"><img src="/images/register_small.png"></a>');
         })
       }
     } else {
       if (tedx.toolBar.node.hasClass("fixed")) {
         tedx.toolBar.node.fadeOut("fast",function() {
           tedx.toolBar.node.removeClass("fixed").fadeIn("fast");
+          tedx.toolBar.node.find('#small_register').fadeOut("fast", function () {
+            $('#small_register').remove();
+          });
         })
       }
       
@@ -105,27 +114,35 @@ tedx.countdown=function() {
 }
 
 tedx.bios={
-	modal_options:{
-		close:true,
-		escClose:true,
-		focus:true,
-		opacity:50,
-		overlayCSS:"background:#000;",
-		modal:true,
-		closeClass:'modal-close',
-		onClose:function(dialog) {
-		  dialog.container.fadeOut('fast',function() {
-		    dialog.overlay.fadeOut('fast',function() {
-		      $.modal.close();
-		    })
-		  })
-		}
-	}
+  modal_options:{
+    close:true,
+    escClose:true,
+    overlayClose:true,
+    focus:true,
+    opacity:50,
+    overlayCSS:"background:#000;",
+    modal:true,
+    closeClass:'modal-close',
+    onOpen: function (dialog) {
+      dialog.overlay.fadeIn('medium');
+      dialog.container.fadeIn('medium');
+      dialog.data.fadeIn('medium');
+    },
+    onClose:function(dialog) {
+      dialog.container.fadeOut('medium');
+      dialog.overlay.fadeOut('medium',function() {
+        $.modal.close();
+      });
+    }
+  }
 }
 
 tedx.bios.init=function() {
 	$("div.speaker-bios").hide().append("<div class='clear'></div>");
-	
+	$(".learn-more").bind('click', function (e) {
+    e.preventDefault();
+    $.scrollTo($(this).attr('href'), 700);
+  });
 	var links = $("#speaker-headshot a"),n=links.length, i;
 	for (i=0;i<n;i++) {
 		link = $(links[i]);

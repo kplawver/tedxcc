@@ -57,7 +57,7 @@ blockquote {
 
 header#main-header {
 	height: 763px;
-	background: #0c0b09 url('images/header-img.png') fixed no-repeat -20px 67px;
+	background: #0c0b09 url('images/header-img.png') fixed no-repeat 50% 67px;
 	color: white;
 }
 
@@ -93,11 +93,13 @@ body.eight-bit header#main-header {
 	display: block;
 	text-indent: -99999px;
 	overflow:hidden;
-	-webkit-transition: background 0.5s linear;
-	-moz-transition: background 0.5s linear;
-	-o-transition: background 0.5s linear;
-	-ms-transition: background 0.5s linear;
-	transition: background 0.5s linear;
+	-webkit-transition: background 0.2s linear;
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+	-moz-transition: background 0.2s linear;
+	-o-transition: background 0.2s linear;
+	-ms-transition: background 0.2s linear;
+	transition: background 0.2s linear;
 }
 
 .facebook a {
@@ -196,11 +198,13 @@ a.register-button {
 	background: url('images/register.png') no-repeat left;
 	color: white;
 	text-decoration: none;
-	-webkit-transition: background 0.5s linear;
-	-moz-transition: background 0.5s linear;
-	-o-transition: background 0.5s linear;
-	-ms-transition: background 0.5s linear;
-	transition: background 0.5s linear;
+	-webkit-transition: background 0.2s linear;
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+	-moz-transition: background 0.2s linear;
+	-o-transition: background 0.2s linear;
+	-ms-transition: background 0.2s linear;
+	transition: background 0.2s linear;
 }
 
 a.register-button:hover {
@@ -227,6 +231,7 @@ nav#main-navigation.fixed {
 nav#main-navigation div.content {
   margin:0 auto;
   padding:0;
+  position: relative;
 }
 
 
@@ -246,7 +251,7 @@ nav#main-navigation.fixed li {
 }
 
 
-nav#main-navigation a {
+nav#main-navigation li a {
   display:block;
 	text-decoration: none;
 	padding: 28px 25px 29px 25px;
@@ -254,15 +259,23 @@ nav#main-navigation a {
 	font: 18px/22px "helvetica neue", helvetica, arial, sans-serif;
 	text-transform: capitalize;
 	letter-spacing: .07em;
-	-webkit-transition: background 1s ease;
-	-moz-transition: background 1s ease;
-	-o-transition: background 1s linear;
-	-ms-transition: background 1s linear;
-	transition: background-color 0.5s ease;
+	-webkit-transition: background 0.3s ease;
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+	-moz-transition: background 0.3s ease;
+	-o-transition: background 0.3s linear;
+	-ms-transition: background 0.3s linear;
+	transition: background-color 0.3s ease;
 }
 
-nav#main-navigation a:hover {
+nav#main-navigation li a:hover {
 	background-color: rgba(100,100,100,0.5);
+}
+
+nav#main-navigation #small_register {
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 article {
@@ -304,11 +317,13 @@ article {
   left:7px;
   width:218px;
   height:210px;
-  -webkit-transition: background 0.5s linear;
-	-moz-transition: background 0.5s linear;
-	-o-transition: background 0.5s linear;
-	-ms-transition: background 0.5s linear;
-	transition: background 0.5s linear;
+  -webkit-transition: background 0.3s linear;
+  -webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+	-moz-transition: background 0.3s linear;
+	-o-transition: background 0.3s linear;
+	-ms-transition: background 0.3s linear;
+	transition: background 0.3s linear;
 }
 
 #speakers #speaker-headshot li span:hover {
@@ -362,10 +377,11 @@ article {
 	padding: 60px;
 	width: 820px;
 	min-height:250px;
-	box-shadow: 0px 0px 5px #e7e7e7;
+	box-shadow: 0px 0px 18px rgba(0,0,0,.5);
 }
 
 .speaker-bios a.modal-close {
+	display: none;
 	float:right;
 	position:relative;
 	top:-60px;
@@ -655,6 +671,8 @@ h5 {
   color:#70170d;
   text-decoration:none;
   -webkit-transition: color 0.5s linear;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
   -moz-transition: color 0.5s linear;
   -o-transition: color 0.5s linear;
   -ms-transition: color 0.5s linear;
