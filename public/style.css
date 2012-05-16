@@ -55,6 +55,10 @@ blockquote {
 	font-style: normal;
 }
 
+body.live-show header#main-header {
+  background-image: none;
+}
+
 header#main-header {
 	height: 763px;
 	background: #0c0b09 url('images/header-img.png') fixed no-repeat 50% 67px;
@@ -124,6 +128,13 @@ body.eight-bit header#main-header {
 
 .flickr a:hover {
 	background: url('images/social/flickr_hover.png') no-repeat;
+}
+
+#tedx-live {
+  width:864px;
+  height:520px;
+  margin:50px auto 0;
+  
 }
 
 #headline {
