@@ -1,6 +1,7 @@
 class TedX < Sinatra::Base
   @@blog_url = "http://blog.tedxcreativecoast.com"
-  @@live = true
+  @@live = false
+  @@is_past = true
   
   # f = File.open("#{settings.public_folder}/index.html")
   # @@index_content = f.read
@@ -10,9 +11,7 @@ class TedX < Sinatra::Base
   
   get '/' do
     @live = @@live
-    # if @live
-    #   redirect 'http://new.livestream.com/tedxcc/tedxcc2012'
-    # end
+    @is_past = @@is_past
     cache_control :public, :max_age => 24000
     erb :index
   end
