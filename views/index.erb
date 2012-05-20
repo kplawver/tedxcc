@@ -13,7 +13,8 @@
 </head>
 <% 
 	body_class = ""
-	body_class = "live-show" if @live
+	body_class << "live-show" if @live
+	body_class << " is-past" if @is_past
 %>
 <body class="<%= body_class %>">
 	<header id="main-header">
