@@ -152,6 +152,10 @@ h2 {
 	font: bolder 21px/24px "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
+#headline a {
+  color: #f78171;
+}
+
 .learn-more {
 	font: 16px/24px Museo700, arial, sans-serif;
 	color: #f78171;
