@@ -1,7 +1,7 @@
 class TedX < Sinatra::Base
   @@blog_url = "http://blog.tedxcreativecoast.com"
   @@live = false
-  @@is_past = true
+  @@is_past = false
   
   # f = File.open("#{settings.public_folder}/index.html")
   # @@index_content = f.read

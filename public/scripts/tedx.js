@@ -93,7 +93,7 @@ tedx.news={
 }
 
 tedx.countdown=function() {
-  var now=new Date(),then=new Date(2012,5-1,18), parent=$("#register"), node=parent.find("p.remaining-days span"),destination=$("#countdown");
+  var now=new Date(),then=new Date(2013,6-1,7), parent=$("#register"), node=parent.find("p.remaining-days span"),destination=$("#countdown");
   
   if (now >= then) {
     parent.hide()
@@ -104,7 +104,7 @@ tedx.countdown=function() {
       layout:'',
       compact:true
     });
-    destination.countdown({until:new Date(2012,5-1,18),format:'D'});
+    destination.countdown({until:new Date(2013,6-1,7),format:'D'});
     days = destination.countdown('getTimes')[3]
     node.text(days);
     destination.countdown('destroy')
