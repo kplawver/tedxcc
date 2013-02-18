@@ -31,7 +31,7 @@ tedx.toolBar={
       if (!tedx.toolBar.node.hasClass("fixed")) {
         tedx.toolBar.node.fadeOut("fast",function() {
           tedx.toolBar.node.addClass("fixed").fadeIn("fast");
-          tedx.toolBar.node.find('.content').append('<a id="small_register" href="http://tedx2012.eventbrite.com/"><img src="/images/register_small.png"></a>');
+          tedx.toolBar.node.find('.content').append('<a id="small_register" href="#registration"><img src="/images/register_small.png"></a>');
         })
       }
     } else {
@@ -174,6 +174,90 @@ tedx.debug=function(msg) {
 	} catch(e) {
 		/* ignore.  i don't care if there's an error. */
 	}
+}
+
+// This will need to be fixed because it's... something.
+
+function OnChange(dropdown)
+{
+
+//Clear all existing ticket fields if present
+   var node = document.getElementById('createTextfields');
+   while (node.hasChildNodes())
+   {
+   node.removeChild(node.firstChild);
+   }
+
+
+   var myindex  = dropdown.selectedIndex
+   var SelValue = dropdown.options[myindex].value
+
+   var out = "<ul>"
+
+   for (var i=1;i<=SelValue;i++)
+   {
+        out+= "<li>" +"<label>Attendee #" + i + "</label><input type=text name='item_1_attend" + i + "ticketname' id='item_1_attend" + i + "ticketname' maxlength=50/><input type=hidden id='passback" + i + "' name='passsback" + i + "' value='item_1_attend" + i + "ticketname'/>" +
+        "<label>Email</label><input type=text name='item_1_attend" + i + "xemail' id='item_1_attend" + i + "xemail' maxlength=75/><input type=hidden id='passback" + (i + 10) + "' name='passback" + (i + 10) + "' value='item_1_attend" + i + "xemail'/></li>";
+   }
+   
+   out +="</ul>";
+   
+   $("#registration input.purchase-button").css("disply",'inline-block');
+   
+   node.innerHTML=out;
+
+
+
+   document.getElementById('NumberOfTickets').value = SelValue;
+
+}
+
+
+
+function myFunction()
+{
+var grabNumberOfTickets;
+grabNumberOfTickets = document.getElementById('NumberOfTickets').value;
+alert("numberoftickets!" + grabNumberOfTickets );
+}
+
+
+
+function validateForm()
+{
+
+   if (document.getElementById('item_1_qty').selectedIndex == 0)
+   {
+       alert("Please select a ticket quantity");
+       return false;
+   }
+
+   else
+   {
+       var grabNumberOfTickets;
+       grabNumberOfTickets = document.getElementById('NumberOfTickets').value;
+
+       for (var i = 1; i <= grabNumberOfTickets; i++)
+       {
+           var x = document.getElementById('item_1_attend' + i + 'ticketname').value;
+           if (x == null || x == "")
+           {
+               alert("Attendee #" + i + " must be filled out.");
+               return false;
+           }
+
+           var xemail = document.getElementById('item_1_attend' + i + 'xemail').value;
+           if (xemail == null || xemail == "")
+           {
+               alert("Attendee #" + i + " email must be filled out.");
+               return false;
+           }
+
+
+       }
+
+   }
+
 }
 
 

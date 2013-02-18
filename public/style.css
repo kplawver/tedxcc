@@ -318,6 +318,10 @@ article {
 	margin: 30px 0 60px 0;
 }
 
+#speakers { /* This is only while we don't have a speakers list. */
+  padding: 55px 0 85px;
+}
+
 #speakers section {
 	background: url('images/sprite.png') -2px -89px;
 	height: 68px;
@@ -470,9 +474,85 @@ article {
   background-image: url("image/about_back_8.png");
 }*/
 
+#registration {
+  padding:82px 0 124px;
+  color: #5c5c5c;
+}
+
+#registration header {
+  
+}
+
+#registration header aside {
+  float: right;
+  padding: 0 0 51px;
+}
+
+#registration header aside ul {
+  margin: 0;
+  padding: 0;
+  font-family: "Museo500", sans-serif;
+  font-size: 17px;
+}
+
+#registration header aside ul li {
+  margin:0 0 14px 0;
+  padding:0;
+  list-style: disc outside;
+}
+
+#registration header h3 {
+  margin: 0;
+  padding: 18px 0 20px;
+}
+
+#registration header p {
+  font-size: 14px;
+}
+
+#registration section {
+  clear: right;
+  padding:54px 0 0;
+  border-top: solid 1px #a6a5a5;
+  font-family: "Museo500", 'helvetica', 'arial', sans-serif;
+  font-size: 16px;
+}
+
+#registration #createTextfields ul li {
+  padding: 0 0 25px 0;
+}
+
+#registration #createTextfields ul li input[type=text] {
+  width: 252px;
+  padding: 22px 25px;
+  font: inherit;
+}
+
+#registration #createTextfields ul li input[type=text]:focus {
+  border-color: #ed1c24;
+  border-style: solid;
+  box-shadow: 0;
+  outline: 0;
+}
+
+#registration #createTextfields ul li label {
+  padding: 0 45px 0 25px;
+}
+
+#registration input.purchase-button {
+  display: none;
+  margin: 0 0 0 165px;
+  padding: 23px 60px;
+  border:0;
+  background: #e84937;
+  color:#fff;
+  font-family: "Museo500", 'helvtica', 'arial', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+
 #about-header {
 	background: #000 url("images/about_back.png") fixed no-repeat;
-	
 	height: 443px;
 }
 
