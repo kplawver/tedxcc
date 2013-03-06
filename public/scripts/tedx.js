@@ -202,7 +202,7 @@ function OnChange(dropdown)
    
    out +="</ul>";
    
-   $("#registration input.purchase-button").css("disply",'inline-block');
+   $("#registration input.purchase-button").css("display",'inline-block');
    
    node.innerHTML=out;
 
