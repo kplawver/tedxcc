@@ -1,3 +1,5 @@
+require 'yaml'
+
 class TedX < Sinatra::Base
   @@blog_url = "http://blog.tedxcreativecoast.com"
   @@live = false
@@ -10,6 +12,7 @@ class TedX < Sinatra::Base
   set :static_cache_control, [:public, {:max_age => 2592000}]
   
   get '/' do
+    @speakers = @@speakers ||= YAML.load(File.read("config/speakers.yml"))
     @live = @@live
     @is_past = @@is_past
     cache_control :public, :max_age => 24000

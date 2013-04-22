@@ -82,15 +82,32 @@
 
 	<article id="speakers">
 		<div class="content">
-			<!-- <h3>The Speakers</h3> -->
+			<h3>The Speakers</h3>
       
-      <% # When ready, include the _speakers partial. %>
-			<%# = render :partial => "speakers" %>
-	
-			<section>
-				<p class="call-for-speakers">Are you interested in speaking at TEDxCC 2013?</p>
-				<p class="apply-link"><a href="https://tcci.wufoo.com/forms/2013-tedxcreativecoast-speakers/">Apply Here!</a></p>
-			</section>
+      <ul id="speaker-headshot">
+      <% @speakers.each do |speaker| %>
+        <li><a href="#<%= speaker[:html_id].to_s %>-bio">
+          <img src="<%= speaker[:photo] %>" 
+          alt="<%= speaker[:first_name] %> <%= speaker[:last_name] %>"/></a></li>
+      <% end %>
+      </ul>
+      
+      <% @speakers.each do |speaker| %>
+        <div class="speaker-bios" id="<%= speaker[:html_id] %>-bio">
+        	<div class="bio">
+        		<ul class="speaker-name-sub">
+        			<li class="speaker-name"><%= speaker[:first_name] %> <%= speaker[:last_name] %></li>
+        			<li class="speaker-sub"><%= speaker[:company] %></li>
+        		</ul>
+        		<p class="speaker-bio"><%= speaker[:description] %></p>
+        	</div>
+        </div>
+      <% end %>
+  
+			<!-- <section>
+			       <p class="call-for-speakers">Are you interested in speaking at TEDxCC 2013?</p>
+			       <p class="apply-link"><a href="https://tcci.wufoo.com/forms/2013-tedxcreativecoast-speakers/">Apply Here!</a></p>
+			     </section> -->
 		</div>
 	</article>
 	
@@ -102,7 +119,7 @@
 	       <ul>
 	         <li>Coffee &amp; Breakfast</li>
 	         <li>A full day of TEDx Sessions</li>
-	         <li>Full lunch by Caf&eacute; Zeum</li>
+	         <li>Full lunch</li>
 	         <li>Post TEDxCC reception</li>
 	       </ul>
 	      </aside>
@@ -356,7 +373,7 @@
 				<!-- <li><img src="images/sponsors/connect.jpg" alt="Connect Savannah"/></li> -->
 				<li><img src="images/sponsors/deemer.jpg" alt="Deemer"/></li>
 				<!-- <li><img src="images/sponsors/nos.jpg" alt="National Office Systems"/></li> -->
-				<li><img src="images/sponsors/Krull_company.jpg" alt="Krull &amp; Company"/></li>
+				<!-- <li><img src="images/sponsors/Krull_company.jpg" alt="Krull &amp; Company"/></li> -->
 				<li><img src="images/sponsors/savannah.jpg" alt="City of Savannah"/></li>
 				<!-- <li><img src="images/sponsors/telfair.jpg" alt="Telfair Museums"/></li> -->
 				<li><img src="images/sponsors/focus_lab.jpg" alt="Focus Lab, LLC"/></li>
