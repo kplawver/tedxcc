@@ -16,9 +16,7 @@
   :first_name: Bob
   :last_name: Clagett
   :company: Dell, Inc.
-  :description: Bob Clagett likes to make stuff... music, software, furniture, vintage
-    scooters, you name it.  He's a software engineer by day, but the rest of the time,
-    he builds, fixes, hacks, explores, and plays with his four amazing little adventurers.
+  :description: Bob Clagett likes to make stuff...  He's a software engineer by day, but the rest of the time, he builds, fixes, hacks, explores, and plays with his four amazing little adventurers. He's a musician and maker, husband and father, and blogs about all of his projects at <a href="http://iliketomakestuff.com">iliketomakestuff.com</a>.
   :photo: /images/speakers/2013/ClagettBob.jpg
 - :html_id: drew-amy
   :first_name: Amy
