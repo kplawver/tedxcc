@@ -297,6 +297,12 @@ body.is-past nav#main-navigation #small_register {
   display:none;
 }
 
+/*This is for sold out things:*/
+
+body.sold-out #registration {
+  display:none;
+}
+
 article {
 	padding: 1px 0 60px 0;
 }

@@ -14,7 +14,8 @@
 </head>
 <% 
 	body_class = ""
-	body_class << "live-show" if @live
+	body_class << "sold-out" if @sold_out
+	body_class << " live-show" if @live
 	body_class << " is-past" if @is_past
 %>
 <body class="<%= body_class %>">
@@ -57,12 +58,21 @@
 					</ul>
 					<p>TEDx was created in the spirit of TED's mission,"ideas worth spreading." The program is designed to give communities, organizations and individuals the opportunity to stimulate dialogue through TED-like experiences at the local level.</p>
 					<a class="learn-more" href="#about-header">Learn more</a>
+					<% if @sold_out %>
+					<a class="register-button" href="#">
+						<div id="register">
+							<p class="remaining-days"><span>XX</span>days left</p>
+							<p class="register"><span>Sold Out</span>for this year</p>
+						</div>
+					</a>					
+					<% else %>
 					<a class="register-button" href="#registration">
 						<div id="register">
 							<p class="remaining-days"><span>XX</span>days left</p>
 							<p class="register"><span>Register</span>for this event</p>
 						</div>
 					</a>
+					<% end %>
 				</div>	
 			<% end %>
 		</div>
