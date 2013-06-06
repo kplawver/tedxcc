@@ -55,10 +55,6 @@ blockquote {
 	font-style: normal;
 }
 
-body.live-show header#main-header {
-  background-image: none;
-}
-
 header#main-header {
 	height: 763px;
 	background: #0c0b09 url('images/header-img.png') fixed no-repeat 50% 67px;
