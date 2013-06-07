@@ -2,7 +2,7 @@ require 'yaml'
 
 class TedX < Sinatra::Base
   @@blog_url = "http://blog.tedxcreativecoast.com"
-  @@live = false
+  @@live = true
   @@is_past = false
   @@sold_out = true
   
