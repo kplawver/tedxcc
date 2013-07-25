@@ -2,8 +2,8 @@ require 'yaml'
 
 class TedX < Sinatra::Base
   @@blog_url = "http://blog.tedxcreativecoast.com"
-  @@live = true
-  @@is_past = false
+  @@live = false
+  @@is_past = true
   @@sold_out = true
   
   # f = File.open("#{settings.public_folder}/index.html")
